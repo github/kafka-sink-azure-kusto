@@ -1,0 +1,7 @@
+version: "3.6"
+services:
+  kafka-sink-azure-kusto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "kafka-sink-azure-kusto:${BUILD_BRANCH_DOCKER_TAG}"
