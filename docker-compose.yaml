@@ -1,7 +1,12 @@
 version: "3.6"
 services:
-  kafka-sink-azure-kusto:
+  kafka-sink-azure-kusto-java11:
     build:
       context: .
-      dockerfile: Dockerfile
-    image: "kafka-sink-azure-kusto:${BUILD_BRANCH_DOCKER_TAG}"
+      dockerfile: Dockerfile.java11
+    image: "kafka-sink-azure-kusto-java11:${BUILD_BRANCH_DOCKER_TAG}"
+  kafka-sink-azure-kusto-java8:
+    build:
+      context: .
+      dockerfile: Dockerfile.java8
+    image: "kafka-sink-azure-kusto-java8:${BUILD_BRANCH_DOCKER_TAG}"
